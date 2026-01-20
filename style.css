@@ -10,7 +10,7 @@ body {
     color: #FFFFFF;
 }
 
-/* container */
+
 .wrapper {
     width: 90%;
     max-width: 1200px;
@@ -18,7 +18,7 @@ body {
     margin-right: auto;
 }
 
-/* header bar */
+
 .top-bar {
     background-color: #16001E;
     position: fixed;
@@ -39,7 +39,7 @@ body {
     align-items: center;
 }
 
-/* logo */
+
 .logo-box {
     font-size: 24px;
     font-weight: 700;
@@ -53,7 +53,7 @@ body {
     color: #FF0B7F;
 }
 
-/* navigation menu */
+
 .menu-box {
     display: flex;
     gap: 40px;
@@ -69,7 +69,7 @@ body {
     color: #FF0B7F;
 }
 
-/* button */
+
 .subscribe-btn {
     background: linear-gradient(135deg, #FF0B7F 0%, #B84EFF 100%);
     color: #FFFFFF;
@@ -88,7 +88,7 @@ body {
     transform: scale(1.05);
 }
 
-/* hamburger */
+
 .burger-menu {
     display: none;
     flex-direction: column;
@@ -101,9 +101,64 @@ body {
     height: 3px;
     background-color: #FFFFFF;
     border-radius: 2px;
+    transition: all 0.3s;
 }
 
-/* main hero part */
+
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+
+.mobile-menu {
+    position: fixed;
+    top: 65px;
+    right: -300px;
+    width: 250px;
+    background-color: #1E0029;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: rgba(255, 255, 255, 0.1);
+    transition: right 0.3s;
+    z-index: 999;
+}
+
+.mobile-menu.active {
+    right: 0px;
+}
+
+.mobile-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.mobile-link:hover {
+    color: #FF0B7F;
+}
+
+.mobile-subscribe {
+    margin-top: 10px;
+}
+
+
 .hero-section {
     background-image: url('./assets/hero-bg.png');
     background-size: cover;
@@ -123,7 +178,7 @@ body {
     margin-bottom: 40px;
 }
 
-/* podcast image circle */
+
 .podcast-pic {
     position: relative;
     display: inline-block;
@@ -151,7 +206,7 @@ body {
     display: block;
 }
 
-/* microphone image */
+
 .mic-img {
     position: absolute;
     top: 50%;
@@ -161,7 +216,7 @@ body {
     height: 200px;
 }
 
-/* badge */
+
 .badge-new {
     position: absolute;
     top: 20px;
@@ -177,7 +232,7 @@ body {
     font-weight: 700;
 }
 
-/* main heading */
+
 .big-title {
     font-size: 72px;
     font-weight: 800;
@@ -195,14 +250,14 @@ body {
     line-height: 1.6;
 }
 
-/* buttons container */
+
 .button-box {
     display: flex;
     gap: 20px;
     justify-content: center;
 }
 
-/* first button */
+
 .button1 {
     background: linear-gradient(135deg, #FF0B7F 0%, #B84EFF 100%);
     color: #FFFFFF;
@@ -224,7 +279,7 @@ body {
     transform: scale(1.05);
 }
 
-/* second button */
+
 .button2 {
     background: transparent;
     color: #FFFFFF;
@@ -254,7 +309,7 @@ body {
     height: 20px;
 }
 
-/* about part */
+
 .about-section {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -278,7 +333,7 @@ body {
     margin-right: auto;
 }
 
-/* statistics section */
+
 .stats-section {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -290,7 +345,7 @@ body {
     gap: 30px;
 }
 
-/* stat item box */
+
 .stat-item {
     background: rgba(255, 255, 255, 0.05);
     padding-top: 40px;
@@ -305,7 +360,7 @@ body {
     transform: translateY(-10px);
 }
 
-/* big number */
+
 .big-number {
     font-size: 48px;
     font-weight: 800;
@@ -316,14 +371,14 @@ body {
     margin-bottom: 10px;
 }
 
-/* small label */
+
 .small-text {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.6);
     letter-spacing: 1px;
 }
 
-/* why choose section */
+
 .choose-section {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -334,14 +389,14 @@ body {
     margin-bottom: 50px;
 }
 
-/* cards container */
+
 .cards-box {
     display: grid;
     grid-template-columns: 410px 1fr;
     gap: 30px;
 }
 
-/* first card */
+
 .card1 {
     grid-row-start: 1;
     grid-row-end: 3;
@@ -354,7 +409,7 @@ body {
     transform: translateY(-10px);
 }
 
-/* second card */
+
 .card2 {
     grid-row: 1;
     background: rgba(255, 255, 255, 0.05);
@@ -366,7 +421,7 @@ body {
     transform: translateY(-10px);
 }
 
-/* third card */
+
 .card3 {
     grid-row: 2;
     background: rgba(255, 255, 255, 0.05);
@@ -378,7 +433,7 @@ body {
     transform: translateY(-10px);
 }
 
-/* fourth card */
+
 .card4 {
     grid-row: 3;
     grid-column: 1;
@@ -391,7 +446,7 @@ body {
     transform: translateY(-10px);
 }
 
-/* fifth card */
+
 .card5 {
     grid-row: 3;
     grid-column: 2;
@@ -404,7 +459,7 @@ body {
     transform: translateY(-10px);
 }
 
-/* icon container */
+
 .icon-box {
     margin-bottom: 20px;
 }
@@ -419,21 +474,21 @@ body {
     height: 40px !important;
 }
 
-/* card title */
+
 .card-heading {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 15px;
 }
 
-/* card description */
+
 .card-text {
     font-size: 16px;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* episodes part */
+
 .episodes-section {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -444,14 +499,14 @@ body {
     margin-bottom: 50px;
 }
 
-/* episodes grid */
+
 .episodes-box {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
 }
 
-/* single episode */
+
 .episode-item {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
@@ -462,7 +517,7 @@ body {
     transform: translateY(-10px);
 }
 
-/* video container */
+
 .video-box {
     position: relative;
     width: 100%;
@@ -482,7 +537,7 @@ body {
     border-bottom-right-radius: 0px;
 }
 
-/* play button overlay */
+
 .play-box {
     position: absolute;
     top: 50%;
@@ -496,7 +551,7 @@ body {
     opacity: 1;
 }
 
-/* play button */
+
 .play-button {
     width: 60px;
     height: 60px;
@@ -515,7 +570,7 @@ body {
     height: 20px;
 }
 
-/* episode info */
+
 .episode-details {
     padding: 25px;
 }
@@ -533,7 +588,7 @@ body {
     margin-bottom: 15px;
 }
 
-/* time display */
+
 .time-box {
     display: flex;
     align-items: center;
@@ -542,7 +597,7 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* host section */
+
 .host-section {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -553,7 +608,7 @@ body {
     margin-bottom: 50px;
 }
 
-/* host container */
+
 .host-box {
     display: flex;
     gap: 60px;
@@ -567,7 +622,7 @@ body {
     flex-shrink: 0;
 }
 
-/* host image */
+
 .pic-box {
     width: 300px;
     height: 300px;
@@ -585,14 +640,14 @@ body {
     flex: 1;
 }
 
-/* host name */
+
 .host-name {
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-/* host bio */
+
 .host-description {
     font-size: 16px;
     line-height: 1.8;
@@ -600,7 +655,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* social icons */
+
 .social-box {
     display: flex;
     gap: 20px;
@@ -626,7 +681,7 @@ body {
     height: 20px;
 }
 
-/* footer area */
+
 .footer-section {
     background-image: url('./assets/footer-bg.png');
     background-size: cover;
@@ -640,14 +695,14 @@ body {
     text-align: center;
 }
 
-/* footer logo */
+
 .footer-logo {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 30px;
 }
 
-/* footer links */
+
 .footer-links {
     display: flex;
     gap: 40px;
@@ -673,20 +728,34 @@ body {
     height: 20px;
 }
 
-/* copyright */
+
 .copy-text {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* responsive for tablet */
+
 @media (max-width: 992px) {
+    .top-bar {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    
+    .logo-box {
+        font-size: 20px;
+    }
+    
     .menu-box {
         display: none;
     }
     
     .burger-menu {
         display: flex;
+    }
+    
+    .hero-section {
+        padding-top: 120px;
+        padding-bottom: 60px;
     }
     
     .circle-img {
@@ -749,8 +818,30 @@ body {
     }
 }
 
-/* responsive for mobile */
+
 @media (max-width: 768px) {
+    .top-bar {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    
+    .logo-box {
+        font-size: 18px;
+    }
+    
+    .subscribe-btn {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 14px;
+    }
+    
+    .hero-section {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    
     .circle-img {
         width: 250px;
         height: 250px;
@@ -818,10 +909,24 @@ body {
     }
 }
 
-/* responsive for small mobile */
+
 @media (max-width: 576px) {
+    .top-bar {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .logo-box {
+        font-size: 16px;
+    }
+    
     .subscribe-box {
         display: none;
+    }
+    
+    .hero-section {
+        padding-top: 90px;
+        padding-bottom: 40px;
     }
     
     .circle-img {

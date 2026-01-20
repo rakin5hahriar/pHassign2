@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechWave - Your Daily Dose of Tech Insights</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     
-    <!-- this is the top menu bar -->
+    
     <div class="top-bar">
         <div class="wrapper">
             <div class="logo-box">
@@ -23,15 +23,23 @@
             <div class="subscribe-box">
                 <button class="subscribe-btn">Subscribe</button>
             </div>
-            <div class="burger-menu">
+            <div class="burger-menu" id="burger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
     </div>
+    
+    
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#episodes" class="mobile-link">Episodes</a>
+        <a href="#host" class="mobile-link">Host</a>
+        <button class="subscribe-btn mobile-subscribe">Subscribe</button>
+    </div>
 
-    <!-- main hero area -->
+    
     <div class="hero-section">
         <div class="wrapper">
             <div class="hero-box">
@@ -58,7 +66,7 @@
         </div>
     </div>
 
-    <!-- about section -->
+    
     <div id="about" class="about-section">
         <div class="wrapper">
             <h2 class="heading2">About The Podcast</h2>
@@ -73,7 +81,7 @@
         </div>
     </div>
 
-    <!-- numbers section -->
+    
     <div class="stats-section">
         <div class="wrapper">
             <div class="stats-box">
@@ -97,7 +105,7 @@
         </div>
     </div>
 
-    <!-- why choose section -->
+    
     <div class="choose-section">
         <div class="wrapper">
             <h2 class="heading2">Why Choose TechWave</h2>
@@ -155,7 +163,7 @@
         </div>
     </div>
 
-    <!-- episodes section -->
+   
     <div id="episodes" class="episodes-section">
         <div class="wrapper">
             <h2 class="heading2">Featured Episodes</h2>
@@ -226,7 +234,7 @@
         </div>
     </div>
 
-    <!-- host section -->
+   
     <div id="host" class="host-section">
         <div class="wrapper">
             <h2 class="heading2">Meet The Host</h2>
@@ -262,7 +270,7 @@
         </div>
     </div>
 
-    <!-- bottom section -->
+    
     <div class="footer-section">
         <div class="wrapper">
             <div class="footer-box">
@@ -291,5 +299,26 @@
             </div>
         </div>
     </div>
+    
+    <script>
+        
+        const burger = document.getElementById('burger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        
+        
+        burger.addEventListener('click', function() {
+            burger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        
+       
+        mobileLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                burger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
