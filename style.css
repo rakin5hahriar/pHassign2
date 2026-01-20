@@ -1,0 +1,255 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #16001E;
+    color: #FFFFFF;
+}
+
+/* container */
+.wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* header bar */
+.top-bar {
+    background-color: #16001E;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.top-bar .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* logo */
+.logo-box {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo-text1 {
+    color: #FFFFFF;
+}
+
+.logo-text2 {
+    color: #FF0B7F;
+}
+
+/* navigation menu */
+.menu-box {
+    display: flex;
+    gap: 40px;
+}
+
+.menu-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu-link:hover {
+    color: #FF0B7F;
+}
+
+/* button */
+.subscribe-btn {
+    background: linear-gradient(135deg, #FF0B7F 0%, #B84EFF 100%);
+    color: #FFFFFF;
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.subscribe-btn:hover {
+    transform: scale(1.05);
+}
+
+/* hamburger */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+}
+
+/* main hero part */
+.hero-section {
+    background-image: url('./assets/hero-bg.png');
+    background-size: cover;
+    background-position: center center;
+    padding-top: 150px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.hero-box {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.circle-box {
+    margin-bottom: 40px;
+}
+
+/* podcast image circle */
+.podcast-pic {
+    position: relative;
+    display: inline-block;
+    animation-name: float-up-down;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes float-up-down {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.circle-img {
+    width: 400px;
+    height: 400px;
+    display: block;
+}
+
+/* microphone image */
+.mic-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+}
+
+/* badge */
+.badge-new {
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    background: linear-gradient(135deg, #FF0B7F 0%, #B84EFF 100%);
+    color: #FFFFFF;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 28px;
+    padding-right: 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* main heading */
+.big-title {
+    font-size: 72px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #FF0B7F 0%, #B84EFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle-text {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* buttons container */
+.button-box {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* first button */
+.button1 {
+    background: linear-gradient(135deg, #FF0B7F 0%, #B84EFF 100%);
+    color: #FFFFFF;
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button1:hover {
+    transform: scale(1.05);
+}
+
+/* second button */
+.button2 {
+    background: transparent;
+    color: #FFFFFF;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #FFFFFF;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button2:hover {
+    background: #FFFFFF;
+    color: #16001E;
+}
+
+.button-icon {
+    width: 20px;
+    height: 20px;
+}
